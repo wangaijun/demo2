@@ -45,7 +45,7 @@ public class MysqlTest {
         departmentRepository.deleteAll();
 
         Department department = new Department();
-        department.setName("开发部");
+        department.setName("department");
         departmentRepository.save(department);
         Assert.notNull(department.getId());
 
