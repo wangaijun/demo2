@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.example.demo.repository.redis;
 
 import com.example.demo.entity.User;
 import com.google.gson.Gson;

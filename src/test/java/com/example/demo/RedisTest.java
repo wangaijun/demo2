@@ -3,7 +3,7 @@ package com.example.demo;
 import com.example.demo.entity.Department;
 import com.example.demo.entity.Role;
 import com.example.demo.entity.User;
-import com.example.demo.repository.UserRedis;
+import com.example.demo.repository.redis.UserRedis;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -5,7 +5,7 @@ import com.example.demo.entity.Role;
 import com.example.demo.entity.User;
 import com.example.demo.repository.DepartmentRepository;
 import com.example.demo.repository.RoleRepository;
-import com.example.demo.repository.UserRepository;
+import com.example.demo.repository.UserRepositoryJpa;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +30,7 @@ public class MysqlTest {
     private static Logger logger = LoggerFactory.getLogger(MysqlTest.class);
 
     @Autowired
-    UserRepository userRepository;
+    UserRepositoryJpa userRepositoryJpa;
 
     @Autowired
     DepartmentRepository departmentRepository;
@@ -40,7 +40,7 @@ public class MysqlTest {
 
     @Before
     public void initData(){
-        userRepository.deleteAll();
+        userRepositoryJpa.deleteAll();
         roleRepository.deleteAll();
         departmentRepository.deleteAll();
 
@@ -63,14 +63,14 @@ public class MysqlTest {
         Assert.notNull(roles);
         user.setRoles(roles);
 
-        userRepository.save(user);
+        userRepositoryJpa.save(user);
         Assert.notNull(user.getId());
     }
 
     @Test
     public void findPage(){
         Pageable pageable = new PageRequest(0,10,new Sort(Sort.Direction.ASC,"id"));
-        Page<User> page = userRepository.findAll(pageable);
+        Page<User> page = userRepositoryJpa.findAll(pageable);
         Assert.notNull(page);
         for (User user : page.getContent()) {
             logger.info("====user==== user name:{},department name:{},role name:{}",user.getName(),user.getDepartment().getName(),user.getRoles().get(0).getName());

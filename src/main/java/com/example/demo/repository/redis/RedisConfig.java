@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.example.demo.repository.redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
