@@ -18,7 +18,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+/**
+ * 在ubuntu下安装redis，
+ * 执行make install
+ * 运行redis
+ * ./src/redis-server ./redis.conf
+ * */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RedisTest {
