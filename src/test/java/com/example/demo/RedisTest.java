@@ -23,6 +23,7 @@ import java.util.List;
  * 执行make install
  * 运行redis
  * ./src/redis-server ./redis.conf
+ * 可选安装：redisdesktopmanager 客户端工具
  * */
 @RunWith(SpringRunner.class)
 @SpringBootTest
