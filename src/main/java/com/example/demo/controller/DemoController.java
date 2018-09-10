@@ -9,6 +9,6 @@ public class DemoController {
     @RequestMapping("/")
     @ResponseBody
     String home(){
-        return "hello";
+        return "hello,waj1";
     }
 }
