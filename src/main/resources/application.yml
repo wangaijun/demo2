@@ -20,5 +20,10 @@ spring:
       host: 127.0.0.1
       port: 27017
       database: test
+    neo4j:
+      uri: http://127.0.0.1:7474
+      username:
+      password: 
+
 
 
